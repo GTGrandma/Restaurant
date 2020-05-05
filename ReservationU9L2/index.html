@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- boostrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="row text-center">
+    <form class="form-inline reservation-form">
+      <div class="form-group">
+        <input type="text" class="form-control reservation-name" placeholder="Jane Doe">
+      </div>
+      <div class="form-group">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Select A Day
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu reservation-day">
+            <li><a>Today</a></li>
+            <li><a>Tomorrow</a></li>
+            <li><a>The day after next</a></li>
+          </ul>
+        </div>
+      </div>
+      <button class="btn btn-default reservation-button">Set Reservation</button>
+    </form>
+    <ul class="reservations"></ul>
+  </div>
+
+
+  <script id="reservation-template" type="text/x-handlebars-template">
+    <li data-id="{{reservationId}}">
+      <p>Hi, {{name}}. Your reservation is all set for {{day}}.</p>
+    </li>
+  </script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <!-- bootstrap js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- handlebars -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <!-- custom js -->
+  <script src="main.js"></script>
+</body>
+</html>
